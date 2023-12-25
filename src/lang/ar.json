@@ -1,0 +1,40 @@
+{
+  "header": {
+    "start-text": "دخول"
+  },
+  "auth": {
+    "signin.text": "تسجيل دخول",
+    "register.text": "إنشاء حساب جديد",
+    "name.label": "الاسم",
+    "phone-number.label": "رقم الجوال",
+    "email.label": "البريد الإلكتروني",
+    "password.label": "كلمة المرور",
+    "no-account.text": "ليس لديك حساب؟",
+    "register.link": "إنشاء حساب",
+    "already-account.text": "لديك حساب؟",
+    "logout.text": "تسجيل الخروج"
+  },
+  "library": {
+    "library.text": "مكتبتي",
+    "no-library.text": "لا توجد مكتبات يرجى الإنشاء",
+    "create-library.text": "رفع ملف",
+    "new-library.text": "مجلد جديد",
+    "title.label": "العنوان",
+    "public.label": "متاح للوصول من قبل الجميع",
+    "create.text": "إنشاء",
+    "edit-library.text": "تعديل مجلد ",
+    "edit.text": "حفظ",
+    "upload.header": "بنساعدك تستغني عن كتابة البطاقات يدوياً وتلخيصها .. ارفع ملفك وخل الباقي علينا",
+    "d&d.text": "اسحب وافلت ملف الـ pdf هنا",
+    "upload-btn.text": "ارفع ملف من جهازك",
+    "or.text": "أو",
+    "mastered.text": "أتقنت",
+    "still-learning.text": "لم أتقن",
+    "remaining.text": "متبقية",
+    "no-cards.text": "لم يتم العثور على بطاقات",
+    "start-learning.text": "ابدأ التعلم",
+    "cards.text": "البطاقات",
+    "files.text": "الملفات",
+    "reveal-answer.text": "كشف الجواب"
+  }
+}

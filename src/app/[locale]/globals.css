@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.outlined_btn {
+  @apply bg-white border border-blue-500 rounded-md px-2 h-8 text-blue-500 font-extrabold;
+}
+
+.filled_btn {
+  @apply bg-blue-600 rounded-xl cursor-pointer text-center px-2 py-3 text-white font-bold;
+}
+
+.form_field {
+  @apply flex flex-col gap-1 w-full;
+}
+
+.form_input {
+  @apply px-1 py-3 border border-blue-500 rounded-xl outline-none focus:border-blue-600 text-sm;
+}
+
+.search_input {
+  @apply px-3 py-1 border-2 border-blue-500 rounded-full outline-none focus:border-blue-600 text-base w-48;
+}
+
+.card {
+  width: 75%;
+  height: 75%;
+  transform-style: preserve-3d;
+  transition: all 1s ease;
+  cursor: pointer;
+}
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+}
+
+.back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+}

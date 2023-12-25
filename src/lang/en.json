@@ -1,0 +1,40 @@
+{
+  "header": {
+    "start-text": "Get Started"
+  },
+  "auth": {
+    "signin.text": "Sign in",
+    "register.text": "Create a new account",
+    "name.label": "Name",
+    "phone-number.label": "Phone Number",
+    "email.label": "Email",
+    "password.label": "Password",
+    "no-account.text": "Don't have account?",
+    "register.link": "Create an account",
+    "already-account.text": "Already have an account?",
+    "logout.text": "Logout"
+  },
+  "library": {
+    "library.text": "library",
+    "no-library.text": "There are no libraries Please Create",
+    "create-library.text": "Create Library",
+    "new-library.text": "New Library",
+    "title.label": "Title",
+    "public.label": "Public",
+    "create.text": "Create",
+    "edit-library.text": "Edit Library",
+    "edit.text": "Edit",
+    "upload.header": "We help you avoid writing cards manually and summarizing them. Upload your file and leave the rest to us",
+    "d&d.text": "Drag and drop the PDF file here",
+    "upload-btn.text": "Upload From Device",
+    "or.text": "OR",
+    "mastered.text": "Mastered",
+    "still-learning.text": "Still Learning",
+    "remaining.text": "Remaining",
+    "no-cards.text": "No Cards Found",
+    "start-learning.text": "Start Learning",
+    "cards.text": "Cards",
+    "files.text": "Files",
+    "reveal-answer.text": "reveal answer"
+  }
+}
