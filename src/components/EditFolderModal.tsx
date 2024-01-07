@@ -26,7 +26,7 @@ function EditFolderModal({
     e.preventDefault();
 
     const folder = {
-      id: library._id,
+      id: library.id,
       title,
       isPublic,
     };

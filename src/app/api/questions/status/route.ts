@@ -3,14 +3,11 @@ import { NextRequest, NextResponse } from "next/server";
 
 export const PUT = async (request: NextRequest) => {
   const { status, id } = await request.json();
-  console.log(id);
-  console.log(status);
   try {
     const updatedQuestion = await prisma.question.update({
       where: { id },
       data: { status },
     });
-    console.log(updatedQuestion);
     return NextResponse.json(updatedQuestion);
   } catch (e) {
     return new Response("Internal Server Error", { status: 200 });
