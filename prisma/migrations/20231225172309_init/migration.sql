@@ -35,7 +35,7 @@ CREATE TABLE `File` (
 CREATE TABLE `Question` (
     `id` INTEGER NOT NULL AUTO_INCREMENT,
     `question` VARCHAR(191) NOT NULL,
-    `answer` VARCHAR(191) NOT NULL,
+    `answer` VARCHAR(300) NOT NULL,
     `status` VARCHAR(191) NOT NULL DEFAULT 'Remaining',
     `libraryId` INTEGER NOT NULL,
     `fileId` INTEGER NOT NULL,

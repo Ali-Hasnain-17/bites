@@ -2,62 +2,26 @@ import { prisma } from "@/config/dbConfig";
 import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 
-const data: any = [
-  {
-    answer: " +92 3099209038",
-    question: " What is Ali Hasnain's contact information?",
-  },
-  {
-    answer: " alihascs830@gmail.com",
-    question: " What is Ali Hasnain's email address?",
-  },
-  {
-    answer:
-      " Ali Hasnain studied at the National University of Science and Technology.",
-    question: " Where did Ali Hasnain study?",
-  },
-  {
-    answer:
-      " Ali Hasnain earned a Bachelor of Science degree in Computer Science.",
-    question: " What degree did Ali Hasnain earn?",
-  },
-  {
-    answer: " Ali Hasnain's CGPA was 3.36/4.00.",
-    question: " What was Ali Hasnain's CGPA?",
-  },
-  {
-    answer: " Ali Hasnain is currently working at 10Pearls.",
-    question: " Where is Ali Hasnain currently working?",
-  },
-  {
-    answer: " Ali Hasnain is a Software Engineer at 10Pearls.",
-    question: " What is Ali Hasnain's position at 10Pearls?",
-  },
-  {
-    answer:
-      " Ali Hasnain is a proficient Full Stack Engineer with expertise in both front-end and back-end development.",
-    question: " What is Ali Hasnain's expertise?",
-  },
-];
 
-async function getData() {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
-}
+// async function getData(data) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(data);
+//     }, 1000);
+//   });
+// }
 
 export const POST = async (request: NextRequest) => {
   const formData = await request.formData();
   const session = await getServerSession();
 
-  // const res = await fetch("http://127.0.0.1:5000/upload", {
-  //   method: "POST",
-  //   body: formData,
-  // });
-
-  const d: any = await getData();
+  const res = await fetch("http://127.0.0.1:5000/upload", {
+    method: "POST",
+    body: formData,
+  });
+  const responseData = await res.json();
+  // console.log(responseData);
+  // const d: any = await responseData.data(responseData);
 
   try {
     // save file information
@@ -69,7 +33,7 @@ export const POST = async (request: NextRequest) => {
       },
     });
 
-    d.forEach(async (element: any) => {
+    responseData.forEach(async (element: any) => {
       const body = {
         ...element,
         libraryId: formData.get("libraryId")?.toString()!,
@@ -91,7 +55,7 @@ export const POST = async (request: NextRequest) => {
       data: { flashCards: { increment: 1 } },
     });
 
-    return NextResponse.json(d);
+    return NextResponse.json(responseData);
   } catch (e) {
     return new Response("Internal Server Error", { status: 500 });
   }
