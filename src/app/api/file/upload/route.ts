@@ -3,13 +3,13 @@ import { getServerSession } from "next-auth";
 import { NextRequest, NextResponse } from "next/server";
 
 
-async function getData(data) {
-  return new Promise((resolve, reject) => {
-    setTimeout(() => {
-      resolve(data);
-    }, 1000);
-  });
-}
+// async function getData(data) {
+//   return new Promise((resolve, reject) => {
+//     setTimeout(() => {
+//       resolve(data);
+//     }, 1000);
+//   });
+// }
 
 export const POST = async (request: NextRequest) => {
   const formData = await request.formData();
@@ -20,8 +20,8 @@ export const POST = async (request: NextRequest) => {
     body: formData,
   });
   const responseData = await res.json();
-  console.log(responseData);
-  const d: any = await getData(responseData);
+  // console.log(responseData);
+  // const d: any = await responseData.data(responseData);
 
   try {
     // save file information
@@ -33,7 +33,7 @@ export const POST = async (request: NextRequest) => {
       },
     });
 
-    d.forEach(async (element: any) => {
+    responseData.forEach(async (element: any) => {
       const body = {
         ...element,
         libraryId: formData.get("libraryId")?.toString()!,
@@ -55,7 +55,7 @@ export const POST = async (request: NextRequest) => {
       data: { flashCards: { increment: 1 } },
     });
 
-    return NextResponse.json(d);
+    return NextResponse.json(responseData);
   } catch (e) {
     return new Response("Internal Server Error", { status: 500 });
   }
